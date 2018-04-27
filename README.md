@@ -5,16 +5,16 @@ This project is a base system for testing connection between a web application b
 * Will be updated asap
 
 # System Specification
-## Smart Contract:
-* Solidity
-  * Version: 0.4.11
-* Injected Web 3 environment
-## Metamask Chrome Plugin
-* Version: 4.6.0
-## npm
-* Version: 5.5.1
-## node
-* Version: v8.1.4
+* Smart Contract
+  * Solidity
+    * Version: 0.4.11
+  * Injected Web 3 environment
+* Metamask Chrome Plugin  
+  * Version: 4.6.0
+* npm
+  * Version: 5.5.1
+* node
+  * Version: v8.1.4
 
 ## Note
 ### About Ropsten Test Networking
