@@ -16,14 +16,14 @@ contract Accounts {
         return 0;
     }
 
-    function createAccount(string _name) public returns(uint _accountId) {
+    function createAccount(string _name) public payable returns(uint _accountId) {
         accountId += 1;
         //accounts[accountId].addr = _addr;
         accounts[accountId].name = _name;
         return accountId;
     }
 
-    function editAccount(uint _id, string _name) public returns(bool) {
+    function editAccount(uint _id, string _name) public payable returns(bool) {
         if(_id > accountId)
             return false;
         //accounts[_id].addr = _addr;
@@ -83,10 +83,11 @@ contract Rotas {
         if(toubanList[_toubanId].rotaPointer + 1 == toubanList[_toubanId].rota.length) {
             return toubanList[_toubanId].rota[0];
         }
-        return toubanList[_toubanId].rota[toubanList[_toubanId].rotaPointer + 1];
+        return toubanList[_toubanId].rota[toubanList[_toubanId].rotaPointer + 1]; // user's account??
     }
 
     function addRota(uint _toubanId, uint _Id) public returns(uint _idCount) {
+        // なんで unit _Idが必要なのか。。。？
         toubanList[toubanId].rota.push(_Id);
         return toubanList[_toubanId].rota.length;
     }
